@@ -9,6 +9,7 @@ function App() {
 
       <main>
         list products
+        add product 1
       </main>
     </div>
   );
