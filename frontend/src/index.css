@@ -7,22 +7,13 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-header {
-  background-color: #404040;
-  padding: 1rem; /* 1 rem is 16px */
+.site-container{
+  min-height: 100vh;
 }
 
-header a{ /* all links insider header will be white */
-
-  color: #ffffff;
-  font-weight: bold;
-  text-decoration: none; /* this will not show the underline */
-
-}
 
 main {
-  padding: 1rem;
-
+  flex: 1;
 }
 
 .products {
