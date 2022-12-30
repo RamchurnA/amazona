@@ -10,6 +10,9 @@ import Badge from 'react-bootstrap/Badge'
 import Rating from '../components/Rating';
 import ListGroupItem from 'react-bootstrap/esm/ListGroupItem';
 import Button from 'react-bootstrap/Button';
+import LoadingBox from '../components/LoadingBox';
+import MessageBox from '../components/MessageBox';
+import { getError } from '../utils';
 
 
 const reducer = (state, action) => {
@@ -48,7 +51,7 @@ useEffect(()=>{
             dispatch({type:'FETCH_SUCCESS', payload: result.data})
 
         } catch(err) {
-            dispatch({type:'FETCH_FAIL', payload: err.message});
+            dispatch({type:'FETCH_FAIL', payload: getError(err)});
         }
     };
     fetchData();
@@ -60,8 +63,8 @@ useEffect(()=>{
 
   return (
 
-    loading? <div>Loading...</div>
-    : error? <div>{error}</div>
+    loading?  <LoadingBox />
+    : error? <MessageBox variant="danger">{error}</MessageBox>
     : <div>
       <Row>
         <Col md={6}>
