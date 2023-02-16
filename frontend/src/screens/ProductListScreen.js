@@ -86,7 +86,7 @@ export default function ProductListScreen() {
         }
         
 
-    }, [page, userInfo.token, successDelete])
+    }, [page, userInfo.token, successDelete]) // should be userInfo
 
     const createHandler = async () => {
         if (window.confirm('Are you sure you want to create a product')) {
