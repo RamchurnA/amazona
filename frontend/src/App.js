@@ -170,7 +170,7 @@ function App() {
               <Route path="/signup" element={<SignupScreen />} />
               <Route path="/profile" element={
               <ProtectedRoute><ProfileScreen /></ProtectedRoute>} />
-              <Route path="/placeorder" element={<PlaceOrderScreen />} />
+              <Route path="/placeorder" element={<PlaceOrderScreen/>} />
               <Route path="/order/:id" element={<ProtectedRoute><OrderScreen /></ProtectedRoute>}></Route>
               <Route
                 path="/orderhistory"
